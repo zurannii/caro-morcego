@@ -1,0 +1,135 @@
+.hero-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url('/assets/hero-us.png');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  overflow: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* fundo escuro */
+  z-index: 1;
+}
+
+.hero-content {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  z-index: 2;
+  text-align: left;
+  padding: 0 20px;
+  max-width: 600px;
+  transform: none;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  color: #d3d3d3; /* cinza claro */
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  color: #b0b0b0; /* cinza médio */
+  margin-bottom: 2rem;
+}
+
+.hero-content button {
+  background-color: #444444; /* cinza escuro */
+  border: none;
+  padding: 0.8rem 1.6rem;
+  color: #ffffff;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.hero-content button:hover {
+  background-color: #222222;
+}
+
+.hero-card {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 20px;
+  max-width: 300px;
+  z-index: 2;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.hero-card h2 {
+  font-size: 1.2rem;
+  color: #e0e0e0; /* quase branco */
+  margin-bottom: 10px;
+}
+
+.hero-card p {
+  font-size: 0.95rem;
+  color: #bbbbbb; /* cinza médio */
+  margin-bottom: 10px;
+}
+
+.hero-card a {
+  color: #999999;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero-card a:hover {
+  text-decoration: underline;
+}
+
+.music-player-container {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+/* --- Responsivo para telas menores --- */
+@media (max-width: 768px) {
+  .hero-content {
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .hero-content button {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+  }
+
+  .hero-card {
+    position: relative;
+    margin: 20px;
+    bottom: unset;
+    right: unset;
+    max-width: 100%;
+  }
+}

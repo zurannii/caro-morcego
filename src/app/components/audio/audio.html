@@ -1,0 +1,30 @@
+<div class="audio-card">
+  <div class="album-cover">
+    <img src="assets/hero-us.png" alt="Capa do álbum" />
+  </div>
+
+  <div class="song-info">
+    <h3>Talk - Hozier</h3>
+    <p>Wasteland, Baby!</p>
+  </div>
+
+  <audio #audioRef loop (timeupdate)="updateProgress()" (loadedmetadata)="loadMetadata()">
+    <source src="assets/audio/hozier-talk.mp3" type="audio/mpeg" />
+  </audio>
+
+  <div class="controls">
+    <input
+      type="range"
+      min="0"
+      max="100"
+      [value]="progress"
+      (input)="seekAudio($event)"
+    />
+    <div class="buttons">
+      <button (click)="togglePlay()" [ngClass]="{ 'playing': isPlaying }">
+        <span *ngIf="isPlaying">⏸</span>
+        <span *ngIf="!isPlaying">▶</span>
+      </button>
+    </div>
+  </div>
+</div>

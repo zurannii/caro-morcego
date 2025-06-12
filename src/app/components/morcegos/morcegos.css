@@ -1,0 +1,47 @@
+.bats {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.bat {
+  position: absolute;
+  width: 60px;
+  animation: fly 10s linear infinite;
+  opacity: 0.6;
+}
+
+.bat1 {
+  top: 10%;
+  left: -100px;
+  animation-delay: 0s;
+}
+
+.bat2 {
+  top: 30%;
+  left: -120px;
+  animation-delay: 3s;
+}
+
+.bat3 {
+  top: 60%;
+  left: -140px;
+  animation-delay: 6s;
+}
+
+@keyframes fly {
+  0% {
+    transform: translateX(0) rotate(0deg) scale(1);
+  }
+  50% {
+    transform: translateX(100vw) translateY(-20px) rotate(15deg) scale(1.1);
+  }
+  100% {
+    transform: translateX(200vw) translateY(0) rotate(-15deg) scale(1);
+  }
+}

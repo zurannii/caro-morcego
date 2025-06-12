@@ -1,0 +1,13 @@
+<section class="carta-container">
+  <button class="botao-carta" (click)="mostrarCarta = !mostrarCarta">
+    {{ mostrarCarta ? 'Fechar Carta 💔' : 'Ler Carta 🖤' }}
+  </button>
+
+  <div *ngIf="mostrarCarta" class="carta">
+    <p class="texto-carta">
+      Meu morcego...<br><br>
+      ...<br>
+      — Sua Rob
+    </p>
+  </div>
+</section>
