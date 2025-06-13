@@ -9,6 +9,6 @@ import { AudioPlayer } from "../audio/audio";
 })
 export class HeroRomanticoComponent {
   verHistoria() {
-    alert('Em breve... uma lembrança especial aparecerá aqui! 💜');
+    alert('Eu te amo mais do que tudo, meu belo morcego! Feliz dia dos namorados! 🦇❤️');
   }
 }
